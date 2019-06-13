@@ -6,8 +6,6 @@ import { getListDataSagas } from './store/actionCreater';
 class About extends React.Component {
 
   componentDidMount() {
-  }
-  componentDidMount() {
     this.props.GetData()
   }
   render() {
@@ -18,8 +16,8 @@ class About extends React.Component {
         <Template>
           <div className="App">
             about
-            <h2>请求回来的数据是{this.props.tiger.about.data}</h2>
-            <h2>当月工资为{this.props.tiger.about.tiger}</h2>
+            <h2>请求回来的数据是{this.props.about.data}</h2>
+            <h2>当月工资为{this.props.about.tiger}</h2>
             <button onClick={PayIncrease}>升职加薪</button>
             <button onClick={PayDecrease}>迟到罚款</button>
           </div>
@@ -30,9 +28,7 @@ class About extends React.Component {
 }
 //需要渲染什么数据
 function mapStateToProps(state) {
-  return {
-    tiger: state
-  }
+  return state
 }
 //需要触发什么行为
 function mapDispatchToProps(dispatch) {
