@@ -1,7 +1,6 @@
 import React from 'react'
 import Template from '../layout/Template'
 import { connect } from 'react-redux';
-import { increase, decrease } from './store/actionCreater'
 import { getListDataSagas } from './store/actionCreater';
 
 import { UnControlled as CodeMirror } from 'react-codemirror2'
@@ -17,7 +16,6 @@ class Home extends React.Component {
     this.props.GetData()
   }
   render() {
-    const { PayIncrease, PayDecrease } = this.props;
     return (
       <div>
         <Template>
@@ -44,15 +42,13 @@ class Home extends React.Component {
   }
 }
 //需要渲染什么数据
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return state
 }
 //需要触发什么行为
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
-    PayIncrease: () => dispatch(increase),
-    PayDecrease: () => dispatch(decrease),
-    GetData: () => dispatch(getListDataSagas)
+    GetData: () => dispatch(getListDataSagas('传参数'))
   }
 }
 

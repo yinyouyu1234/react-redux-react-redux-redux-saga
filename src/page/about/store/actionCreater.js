@@ -1,15 +1,17 @@
+import { UP, DOWN, GET_LIST_DATA, GET_LIST } from "./typeCreater";
+
 export const increase = {
-  type: '涨工资2'
+  type: UP
 }
 export const decrease = {
-  type: '扣工资2'
+  type: DOWN
 }
 
 export const getListData = (data) => ({
-  type: 'getListData',
+  type: GET_LIST_DATA,
   value: data
 })
 
 export const getListDataSagas = {
-  type: 'get_list',
+  type: GET_LIST,
 }

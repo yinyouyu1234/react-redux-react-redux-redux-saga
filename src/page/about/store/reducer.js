@@ -1,3 +1,5 @@
+import { UP, DOWN } from './typeCreater'
+import { GET_LIST_DATA } from '../../home/store/typeCreater';
 
 const store = {
   tiger: 800,
@@ -9,13 +11,13 @@ const about = (state = store, action) => {
   console.log(state, 2222222)
   let newState = JSON.parse(JSON.stringify(state))
   switch (action.type) {
-    case '涨工资2':
+    case UP:
       newState.tiger += 100
       return newState;
-    case '扣工资2':
+    case DOWN:
       newState.tiger -= 100
       return newState;
-    case 'getListData':
+    case GET_LIST_DATA:
       newState.data = action.value
       return newState;
     default:
