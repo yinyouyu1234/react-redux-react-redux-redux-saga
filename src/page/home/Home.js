@@ -19,12 +19,6 @@ class Home extends React.Component {
     return (
       <div>
         <Template>
-          {/* <div className="App">
-            <h2>请求回来的数据是{this.props.home.data}</h2>
-            <h2>当月工资为{this.props.home.tiger}</h2>
-            <button onClick={PayIncrease}>升职加薪</button>
-            <button onClick={PayDecrease}>迟到罚款</button>
-          </div> */}
           <CodeMirror
             value='<h1>I ♥ react-codemirror2</h1>'
             options={{

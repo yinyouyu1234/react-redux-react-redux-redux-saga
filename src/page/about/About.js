@@ -3,6 +3,8 @@ import Template from '../layout/Template'
 import { connect } from 'react-redux';
 import { increase, decrease } from './store/actionCreater'
 import { getListDataSagas } from './store/actionCreater';
+import { PageHeader, Button } from 'antd';
+
 class About extends React.Component {
 
   componentDidMount() {
@@ -15,11 +17,11 @@ class About extends React.Component {
       <div>
         <Template>
           <div className="App">
-            about
+            <PageHeader title="About" subTitle="This is a about" />
             <h2>请求回来的数据是{this.props.about.data}</h2>
             <h2>当月工资为{this.props.about.tiger}</h2>
-            <button onClick={PayIncrease}>升职加薪</button>
-            <button onClick={PayDecrease}>迟到罚款</button>
+            <Button onClick={PayIncrease} type="primary">升职加薪</Button>
+            <Button onClick={PayDecrease} type="danger">迟到罚款</Button>
           </div>
         </Template>
       </div>
