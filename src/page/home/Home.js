@@ -13,9 +13,10 @@ require('codemirror/mode/javascript/javascript.js');
 class Home extends React.Component {
 
   componentDidMount() {
-    this.props.GetData()
+    this.props.GetData('传参数')
   }
   render() {
+    console.log(this.props)
     return (
       <div>
         <Template>
@@ -42,7 +43,7 @@ const mapStateToProps = (state) => {
 //需要触发什么行为
 const mapDispatchToProps = (dispatch) => {
   return {
-    GetData: () => dispatch(getListDataSagas('传参数'))
+    GetData: (data) => dispatch(getListDataSagas(data))
   }
 }
 
