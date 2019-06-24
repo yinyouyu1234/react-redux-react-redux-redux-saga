@@ -1,6 +1,6 @@
 import React from 'react';
 import About from './page/about/About'
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
 
 export default class A extends React.Component {
