@@ -2,6 +2,7 @@ import React from 'react'
 import Template from '../layout/Template'
 import { connect } from 'react-redux';
 import { getListDataSagas } from './store/actionCreater';
+import intl from 'react-intl-universal';
 
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 
@@ -14,6 +15,15 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.props.GetData('传参数')
+    const locales = {
+      "en-US": require('../../locales/en-US.json'),
+      "zh-CN": require('../../locales/zh-CN.json'),
+    };
+
+    intl.init({
+      currentLocale: 'zh-CN', // TODO: determine locale here
+      locales,
+    })
   }
   render() {
     console.log(this.props)
@@ -32,6 +42,7 @@ class Home extends React.Component {
             }}
           />
         </Template>
+        {intl.get('SIMPLE')}11
       </div>
     )
   }
