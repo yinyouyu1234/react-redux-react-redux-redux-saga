@@ -5,7 +5,7 @@
   "dependencies": {
     "ant": "^0.2.0",
     "antd": "^3.19.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "codemirror": "^5.47.0",
     "react": "^16.8.6",
     "react-codemirror": "^1.0.0",
